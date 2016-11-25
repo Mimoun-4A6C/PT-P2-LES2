@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <style>
+              select{
+                width: 10em;
+                cursor: pointer;
+            }
+          
+          </style>
+    </head>
+    <body>
+        Breedte: <br/><input id="breedte"/><br/>
+        Hoogte:  <br/><input id="hoogte"/><br/>        
+        Kleur is :
+        <br/>
+        <select  id="kleur">
+        <option value="leeg">Kies uw kleur</option>
+        <option value="red">Rood</option>
+        <option value="orange">oranje</option>
+        <option value="yellow">Geel</option>
+        <option value="blue">Blauw</option>
+        <option value="aqua">Aqua</option>
+        <option value="black">Zwart</option>
+        <option value="gray">Grijs</option>
+        </select>
+        
+        <br><button onclick="toon()" id="toon">Toon</button>
+        <div id="vierkant"></div>
+        <script>
+            function toon() {
+              var breedte = document.getElementById('breedte').value;
+               var hoogte = document.getElementById('hoogte').value;
+              
+              
+                document.getElementById("vierkant").style.width = breedte+"px";
+                document.getElementById("vierkant").style.height =hoogte+"px";
+                
+                var kleuren = "";
+                kleuren = document.getElementById('kleur').value;
+                vierkant.style.backgroundColor = kleuren;
+                
+               
+            }
+        
+        </script>
+                
+    </body>
+</html>
+  

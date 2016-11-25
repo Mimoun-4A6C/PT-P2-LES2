@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <style>
+              div{
+                  background: green;
+              }
+                 
+        
+          
+          </style>
+    </head>
+    <body>
+        Breedte: <br/><input id="breedte"/><br/>
+        Hoogte:<br/> <input id="hoogte"/><br/>
+        <button onclick="toon()">Toon</button>
+        <div id="kleur"></div>
+        <script>
+            function toon() {
+              var breedte = document.getElementById('breedte').value;
+               var hoogte = document.getElementById('hoogte').value;
+              
+              
+              document.getElementById("kleur").style.width = breedte+"px";
+                document.getElementById("kleur").style.height =hoogte+"px";
+            }
+        
+        </script>
+                
+    </body>
+</html>
+          
