@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<html>
+      <head>
+          <meta http-equiv="content-type"
+                content="text/html";
+                charset=utf-8>
+        <title>Totaal bedrag</title>
+          <style>
+              #div{
+                  border: 1px solid black;
+                  height: 250px;
+                  width: 300px;
+                  background-color: aqua;
+                  color: blue;
+                  font-size: 16px;
+                  font-family: cursive;
+              }
+              #knop{
+                  background-color: lawngreen;
+                  width: 80px;
+                  height: 30px;
+              }
+              #knop:hover{
+                  background-color:fuchsia;
+                  cursor: pointer;
+                
+                  
+              }
+              #totaal{
+                  color: black;
+                
+              }
+        
+          
+          </style>
+    </head>
+    <div id="div"><br> 
+        Bedrag per stuk: <br><input id="bedrag" type="number" placeholder="Bedrag per stuk"><br><br>
+        Aantal: <br><input id="aantal" type="number" placeholder="aantal"><br><br>
+        <button onclick="totaal()"id="knop">Bereken</button><br><br>
+        <div  id="totaal">het totaal is:</div>
+            </div>
+    <body>
+        <script>
+            
+        function totaal(){
+            var bedragps=document.getElementById('bedrag').value;
+            var aantal=document.getElementById('aantal').value;
+            var totaal=bedragps*aantal;
+            document.getElementById('totaal').innerHTML="het totaal is: "+totaal;    
+        
+        }
+        </script>
+                
+    </body>
+</html>
+          
