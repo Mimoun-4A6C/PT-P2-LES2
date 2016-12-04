@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <meta http-equiv="content-type"
+        content="text/html"; charset=UTF-8>
+        
+          <style>
+            
+              #vierkant{
+                  border:solid black 1px;
+                  height: 100px;
+                  width: 100px;
+                  margin-top: 20px;
+                  background-color: aqua;
+                  border-radius: 50%; 
+                 -webkit-transition:margin-left 2s,margin-top 3s;
+                 transition:margin-left 2s,margin-top 3s;
+                 } 
+            
+              
+           
+              
+        
+          
+          </style>
+    </head>
+    <body>
+        
+    <button onclick="left()" id="links">Links</button>
+    <button onclick="omlaag()" id="omlaag">omlaag</button>
+    <button onclick="right()" id="rechts">rechts</button>
+    <button onclick="omhoog()" id="omhoog">omhoog</button>
+    <button onclick="draailinks()" id="draailinks">draai links</button>
+    <button onclick="draairechts()" id="draairechts">draai rechts</button>
+    <div id="vierkant"> </div>
+    
+        <script>
+        function left(
+        ) {
+        document.getElementById("vierkant").style.marginLeft= "0px";
+        document.getElementById('links').disabled=true;
+        document.getElementById('rechts').disabled=false;
+        }
+        
+    
+        function right() {
+        document.getElementById("vierkant").style.marginLeft = 100+"px";
+        document.getElementById('links').disabled=false;
+      document.getElementById('rechts').disabled=true;
+        }
+        function omlaag() {
+        document.getElementById("vierkant").style.marginTop= 100+"px";
+        document.getElementById('omlaag').disabled=true;
+        document.getElementById('omhoog').disabled=false;
+        
+        }
+         function omhoog() {
+        document.getElementById("vierkant").style.marginTop= -100+"px";
+        document.getElementById('omlaag').disabled=false;
+        document.getElementById('omhoog').disabled=true;
+        
+        }
+    
+        
+        </script>
+                
+    </body>
+</html>
+          
